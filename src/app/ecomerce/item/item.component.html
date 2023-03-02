@@ -1,5 +1,5 @@
 <li class="flex py-6"
-    [class]="item.onSale? 'bg-orange-400':''">
+    [ngClass]="getClasses(item)">
   <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
     <img src="{{ item.img }}" alt="" class="h-full w-full object-cover object-center">
   </div>

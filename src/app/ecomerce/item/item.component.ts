@@ -24,6 +24,12 @@ export class ItemComponent implements OnInit {
       );
   }
 
+  getClasses(item:Item) {
+    return {
+      'bg-orange-400': item.onSale,
+    }
+  }
+
   increase(): void {
     this.item.quantity++;
   }
