@@ -1,0 +1,36 @@
+<li class="flex py-6"
+    [class]="item.onSale? 'bg-orange-400':''">
+  <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+    <img src="{{ item.img }}" alt="" class="h-full w-full object-cover object-center">
+  </div>
+
+  <div class="ml-4 flex flex-1 flex-col">
+    <div>
+      <div class="flex justify-between text-base font-medium text-gray-900">
+        <h3>
+          <a href="#">{{ item.name }}</a>
+        </h3>
+        <p class="ml-4">{{ item.price }}</p>
+      </div>
+    </div>
+    <div class="flex flex-1 items-end justify-between text-sm">
+      <a href="#" 
+        (click)="decrese()"
+        class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base text-white shadow-sm hover:bg-indigo-700">
+        &lt;
+      </a>
+      <p class="flex items-center justify-center rounded-md border border-transparent px-6-py-3 text-base text-gray-500">
+        Qty {{ item.quantity }}
+      </p>
+      <a href="#" 
+        (click)="increase()"
+        class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base text-white shadow-sm hover:bg-indigo-700">
+        &gt;
+      </a>
+
+      <div class="flex">
+        <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+      </div>
+    </div>
+  </div>
+</li>
