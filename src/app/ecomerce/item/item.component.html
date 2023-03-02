@@ -16,6 +16,7 @@
     <div class="flex flex-1 items-end justify-between text-sm">
       <a href="#" 
         (click)="decrese()"
+        *ngIf="item.quantity > 0"
         class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base text-white shadow-sm hover:bg-indigo-700">
         &lt;
       </a>
