@@ -14,20 +14,10 @@
       </div>
     </div>
     <div class="flex flex-1 items-end justify-between text-sm">
-      <a href="#" 
-        (click)="decrese()"
-        *ngIf="item.quantity > 0"
-        class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base text-white shadow-sm hover:bg-indigo-700">
-        &lt;
-      </a>
-      <p class="flex items-center justify-center rounded-md border border-transparent px-6-py-3 text-base text-gray-500">
-        Qty {{ item.quantity }}
-      </p>
-      <a href="#" 
-        (click)="increase()"
-        class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base text-white shadow-sm hover:bg-indigo-700">
-        &gt;
-      </a>
+      <select
+        class="flex items-center justify-center rounded-md border border-transparent px-6 py-3 text-base text-black shadow-sm">
+        <option *ngFor="let item of [].constructor(20); let i = index">{{ i }}</option>
+      </select>
 
       <div class="flex">
         <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
